@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
-import "./globals.css";
+import "./globals.css"
+
 const serif = Fraunces({ subsets: ["latin"], variable: "--font-serif" });
 const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
