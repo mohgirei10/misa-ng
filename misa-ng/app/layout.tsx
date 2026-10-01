@@ -1,13 +1,36 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
-import "./globals.css"
+import "./globals.css";
 
-const serif = Fraunces({ subsets: ["latin"], variable: "--font-serif" });
-const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
+const serif = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const sans = Manrope({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "MISA NG LTD | Property, investment and developer partnerships",
-  description: "Commission-based property agency in Nigeria: listings, real estate and finance news, developer onboarding and investment.",
+  title: "MISA NG LTD | Property, Investment & Developer Partnerships",
+  description:
+    "Commission-based property agency in Nigeria: property listings, real estate and finance news, developer onboarding, and investment opportunities.",
 };
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (<html lang="en" className={`${serif.variable} ${sans.variable}`}><body>{children}</body></html>);
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${serif.variable} ${sans.variable}`}
+    >
+      <body>{children}</body>
+    </html>
+  );
 }
